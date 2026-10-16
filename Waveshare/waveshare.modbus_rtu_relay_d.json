@@ -1,0 +1,592 @@
+{
+  "schema": "modbus-magic.device-template.v1",
+  "manufacturer": "Waveshare",
+  "model": "Modbus RTU Relay (D)",
+  "id": "waveshare.modbus_rtu_relay_d",
+  "category": "relay",
+  "interface": "RS485",
+  "protocol": "Modbus RTU",
+  "addressing": "zero_based_protocol_offset",
+  "status": "documentation_mapped_not_hardware_tested",
+  "source_url": "https://www.waveshare.com/wiki/Modbus_RTU_Relay_%28D%29",
+  "registers": [
+    {
+      "name": "Relay 1",
+      "address": 0,
+      "address_hex": "0x0000",
+      "register_type": "coil",
+      "function_code": 1,
+      "access": "read_write",
+      "data_type": "bool",
+      "write_function_code": 5,
+      "write_values": {
+        "on": 65280,
+        "off": 0
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Digital input 1",
+      "address": 0,
+      "address_hex": "0x0000",
+      "register_type": "discrete_input",
+      "function_code": 2,
+      "access": "read",
+      "data_type": "bool"
+    },
+    {
+      "name": "Control mode 1",
+      "address": 4096,
+      "address_hex": "0x1000",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_function_code": 6,
+      "write_requires_confirmation": true,
+      "enum": {
+        "0": "normal",
+        "1": "linkage",
+        "2": "toggle",
+        "3": "edge_trigger"
+      }
+    },
+    {
+      "name": "Flash-on delay output 1",
+      "address": 512,
+      "address_hex": "0x0200",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-off delay output 1",
+      "address": 1024,
+      "address_hex": "0x0400",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Relay 2",
+      "address": 1,
+      "address_hex": "0x0001",
+      "register_type": "coil",
+      "function_code": 1,
+      "access": "read_write",
+      "data_type": "bool",
+      "write_function_code": 5,
+      "write_values": {
+        "on": 65280,
+        "off": 0
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Digital input 2",
+      "address": 1,
+      "address_hex": "0x0001",
+      "register_type": "discrete_input",
+      "function_code": 2,
+      "access": "read",
+      "data_type": "bool"
+    },
+    {
+      "name": "Control mode 2",
+      "address": 4097,
+      "address_hex": "0x1001",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_function_code": 6,
+      "write_requires_confirmation": true,
+      "enum": {
+        "0": "normal",
+        "1": "linkage",
+        "2": "toggle",
+        "3": "edge_trigger"
+      }
+    },
+    {
+      "name": "Flash-on delay output 2",
+      "address": 513,
+      "address_hex": "0x0201",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-off delay output 2",
+      "address": 1025,
+      "address_hex": "0x0401",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Relay 3",
+      "address": 2,
+      "address_hex": "0x0002",
+      "register_type": "coil",
+      "function_code": 1,
+      "access": "read_write",
+      "data_type": "bool",
+      "write_function_code": 5,
+      "write_values": {
+        "on": 65280,
+        "off": 0
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Digital input 3",
+      "address": 2,
+      "address_hex": "0x0002",
+      "register_type": "discrete_input",
+      "function_code": 2,
+      "access": "read",
+      "data_type": "bool"
+    },
+    {
+      "name": "Control mode 3",
+      "address": 4098,
+      "address_hex": "0x1002",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_function_code": 6,
+      "write_requires_confirmation": true,
+      "enum": {
+        "0": "normal",
+        "1": "linkage",
+        "2": "toggle",
+        "3": "edge_trigger"
+      }
+    },
+    {
+      "name": "Flash-on delay output 3",
+      "address": 514,
+      "address_hex": "0x0202",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-off delay output 3",
+      "address": 1026,
+      "address_hex": "0x0402",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Relay 4",
+      "address": 3,
+      "address_hex": "0x0003",
+      "register_type": "coil",
+      "function_code": 1,
+      "access": "read_write",
+      "data_type": "bool",
+      "write_function_code": 5,
+      "write_values": {
+        "on": 65280,
+        "off": 0
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Digital input 4",
+      "address": 3,
+      "address_hex": "0x0003",
+      "register_type": "discrete_input",
+      "function_code": 2,
+      "access": "read",
+      "data_type": "bool"
+    },
+    {
+      "name": "Control mode 4",
+      "address": 4099,
+      "address_hex": "0x1003",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_function_code": 6,
+      "write_requires_confirmation": true,
+      "enum": {
+        "0": "normal",
+        "1": "linkage",
+        "2": "toggle",
+        "3": "edge_trigger"
+      }
+    },
+    {
+      "name": "Flash-on delay output 4",
+      "address": 515,
+      "address_hex": "0x0203",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-off delay output 4",
+      "address": 1027,
+      "address_hex": "0x0403",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Relay 5",
+      "address": 4,
+      "address_hex": "0x0004",
+      "register_type": "coil",
+      "function_code": 1,
+      "access": "read_write",
+      "data_type": "bool",
+      "write_function_code": 5,
+      "write_values": {
+        "on": 65280,
+        "off": 0
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Digital input 5",
+      "address": 4,
+      "address_hex": "0x0004",
+      "register_type": "discrete_input",
+      "function_code": 2,
+      "access": "read",
+      "data_type": "bool"
+    },
+    {
+      "name": "Control mode 5",
+      "address": 4100,
+      "address_hex": "0x1004",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_function_code": 6,
+      "write_requires_confirmation": true,
+      "enum": {
+        "0": "normal",
+        "1": "linkage",
+        "2": "toggle",
+        "3": "edge_trigger"
+      }
+    },
+    {
+      "name": "Flash-on delay output 5",
+      "address": 516,
+      "address_hex": "0x0204",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-off delay output 5",
+      "address": 1028,
+      "address_hex": "0x0404",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Relay 6",
+      "address": 5,
+      "address_hex": "0x0005",
+      "register_type": "coil",
+      "function_code": 1,
+      "access": "read_write",
+      "data_type": "bool",
+      "write_function_code": 5,
+      "write_values": {
+        "on": 65280,
+        "off": 0
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Digital input 6",
+      "address": 5,
+      "address_hex": "0x0005",
+      "register_type": "discrete_input",
+      "function_code": 2,
+      "access": "read",
+      "data_type": "bool"
+    },
+    {
+      "name": "Control mode 6",
+      "address": 4101,
+      "address_hex": "0x1005",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_function_code": 6,
+      "write_requires_confirmation": true,
+      "enum": {
+        "0": "normal",
+        "1": "linkage",
+        "2": "toggle",
+        "3": "edge_trigger"
+      }
+    },
+    {
+      "name": "Flash-on delay output 6",
+      "address": 517,
+      "address_hex": "0x0205",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-off delay output 6",
+      "address": 1029,
+      "address_hex": "0x0405",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Relay 7",
+      "address": 6,
+      "address_hex": "0x0006",
+      "register_type": "coil",
+      "function_code": 1,
+      "access": "read_write",
+      "data_type": "bool",
+      "write_function_code": 5,
+      "write_values": {
+        "on": 65280,
+        "off": 0
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Digital input 7",
+      "address": 6,
+      "address_hex": "0x0006",
+      "register_type": "discrete_input",
+      "function_code": 2,
+      "access": "read",
+      "data_type": "bool"
+    },
+    {
+      "name": "Control mode 7",
+      "address": 4102,
+      "address_hex": "0x1006",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_function_code": 6,
+      "write_requires_confirmation": true,
+      "enum": {
+        "0": "normal",
+        "1": "linkage",
+        "2": "toggle",
+        "3": "edge_trigger"
+      }
+    },
+    {
+      "name": "Flash-on delay output 7",
+      "address": 518,
+      "address_hex": "0x0206",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-off delay output 7",
+      "address": 1030,
+      "address_hex": "0x0406",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Relay 8",
+      "address": 7,
+      "address_hex": "0x0007",
+      "register_type": "coil",
+      "function_code": 1,
+      "access": "read_write",
+      "data_type": "bool",
+      "write_function_code": 5,
+      "write_values": {
+        "on": 65280,
+        "off": 0
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Digital input 8",
+      "address": 7,
+      "address_hex": "0x0007",
+      "register_type": "discrete_input",
+      "function_code": 2,
+      "access": "read",
+      "data_type": "bool"
+    },
+    {
+      "name": "Control mode 8",
+      "address": 4103,
+      "address_hex": "0x1007",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_function_code": 6,
+      "write_requires_confirmation": true,
+      "enum": {
+        "0": "normal",
+        "1": "linkage",
+        "2": "toggle",
+        "3": "edge_trigger"
+      }
+    },
+    {
+      "name": "Flash-on delay output 8",
+      "address": 519,
+      "address_hex": "0x0207",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-off delay output 8",
+      "address": 1031,
+      "address_hex": "0x0407",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "All outputs command",
+      "address": 255,
+      "address_hex": "0x00FF",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "write_values": {
+        "on": 65280,
+        "off": 0,
+        "toggle": 21760
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "UART parameters",
+      "address": 8192,
+      "address_hex": "0x2000",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_function_code": 6,
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Slave address",
+      "address": 16384,
+      "address_hex": "0x4000",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_function_code": 6,
+      "write_requires_confirmation": true,
+      "min": 1,
+      "max": 255
+    },
+    {
+      "name": "Firmware version x100",
+      "address": 32768,
+      "address_hex": "0x8000",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read",
+      "data_type": "uint16",
+      "scale": 0.01
+    }
+  ],
+  "notes": [
+    "No hardware test performed. Verify exact PCB/firmware revision before enabling writes.",
+    "4x/3x prefixes are register classes, not decimal address offsets."
+  ],
+  "wiki_source_type": "official_manufacturer_wiki",
+  "hardware_tested": false,
+  "import_enabled": true,
+  "writes_enabled_by_default": false,
+  "verified_complete_protocol": false
+}

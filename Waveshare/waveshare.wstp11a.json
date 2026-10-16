@@ -1,0 +1,50 @@
+{
+  "schema": "modbus-magic.device-template.v1",
+  "manufacturer": "Waveshare",
+  "model": "WSTP11A",
+  "id": "waveshare.wstp11a",
+  "category": "temperature_sensor",
+  "interface": "RS485",
+  "protocol": "Modbus RTU",
+  "addressing": "zero_based_protocol_offset",
+  "status": "documentation_mapped_not_hardware_tested",
+  "source_url": "https://www.waveshare.com/wiki/WSTP11A",
+  "registers": [
+    {
+      "name": "Temperature raw reading",
+      "address": 0,
+      "address_hex": "0x0000",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "offset": -50,
+      "unit": "degC",
+      "formula": "temperature_C = raw / 10 - 50",
+      "verification_note": "Wiki uses a shared WSSP08A section; validate this formula against device variant before deployment"
+    },
+    {
+      "name": "Modbus slave ID",
+      "address": 15,
+      "address_hex": "0x000F",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_function_code": 6,
+      "write_requires_confirmation": true,
+      "risk": "configuration_change"
+    }
+  ],
+  "notes": [
+    "WSTP11A Wiki examples share wording with WSSP08A; mapping is PROVISIONAL.",
+    "Do not enable any writes without manual verification.",
+    "Not physically tested."
+  ],
+  "wiki_source_type": "official_manufacturer_wiki",
+  "hardware_tested": false,
+  "import_enabled": true,
+  "writes_enabled_by_default": false,
+  "verified_complete_protocol": false
+}

@@ -1,0 +1,48 @@
+{
+  "schema": "modbus-magic.device-template.v1",
+  "manufacturer": "Waveshare",
+  "model": "WSSP08A",
+  "id": "waveshare.wssp08a",
+  "category": "pressure_sensor",
+  "interface": "RS485",
+  "protocol": "Modbus RTU",
+  "addressing": "zero_based_protocol_offset",
+  "status": "documentation_mapped_not_hardware_tested",
+  "source_url": "https://www.waveshare.com/wiki/WSSP08A",
+  "registers": [
+    {
+      "name": "Pressure raw reading",
+      "address": 0,
+      "address_hex": "0x0000",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read",
+      "data_type": "uint16",
+      "unit": "raw_counts",
+      "conversion": "physical = range_min + raw*(range_max-range_min)/2000",
+      "conversion_requires_configured_range": true
+    },
+    {
+      "name": "Modbus slave ID",
+      "address": 15,
+      "address_hex": "0x000F",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_function_code": 6,
+      "write_requires_confirmation": true,
+      "risk": "configuration_change"
+    }
+  ],
+  "notes": [
+    "Pressure range is SKU-dependent; DO NOT automatically assume 0–1.6 MPa.",
+    "Wiki example states raw 0..2000 and Modbus FC03/FC06; verify actual instrument scale before display.",
+    "Not physically tested."
+  ],
+  "wiki_source_type": "official_manufacturer_wiki",
+  "hardware_tested": false,
+  "import_enabled": true,
+  "writes_enabled_by_default": false,
+  "verified_complete_protocol": false
+}

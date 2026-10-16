@@ -1,0 +1,189 @@
+{
+  "schema": "modbus-magic.device-template.v1",
+  "manufacturer": "Waveshare",
+  "model": "Modbus RTU DC Monitor",
+  "id": "waveshare.modbus_rtu_dc_monitor",
+  "category": "dc_monitor",
+  "interface": "RS485",
+  "protocol": "Modbus RTU",
+  "addressing": "zero_based_protocol_offset",
+  "status": "documentation_mapped_not_hardware_tested",
+  "source_url": "https://docs.waveshare.com/RS232-RS485-CAN-DALI2/Modbus_RTU_DC_Monitor/Development-Protocol",
+  "registers": [
+    {
+      "name": "Channel 1 Voltage",
+      "address": 0,
+      "address_hex": "0x0000",
+      "register_type": "input_register",
+      "function_code": 4,
+      "access": "read",
+      "data_type": "uint16",
+      "scale": 0.001,
+      "unit": "V"
+    },
+    {
+      "name": "Channel 1 Current",
+      "address": 1,
+      "address_hex": "0x0001",
+      "register_type": "input_register",
+      "function_code": 4,
+      "access": "read",
+      "data_type": "int16",
+      "scale": 0.001,
+      "unit": "A"
+    },
+    {
+      "name": "Channel 1 Power",
+      "address": 2,
+      "address_hex": "0x0002",
+      "register_type": "input_register",
+      "function_code": 4,
+      "access": "read",
+      "data_type": "uint16",
+      "scale": 0.01,
+      "unit": "W"
+    },
+    {
+      "name": "Channel 2 Voltage",
+      "address": 3,
+      "address_hex": "0x0003",
+      "register_type": "input_register",
+      "function_code": 4,
+      "access": "read",
+      "data_type": "uint16",
+      "scale": 0.001,
+      "unit": "V"
+    },
+    {
+      "name": "Channel 2 Current",
+      "address": 4,
+      "address_hex": "0x0004",
+      "register_type": "input_register",
+      "function_code": 4,
+      "access": "read",
+      "data_type": "int16",
+      "scale": 0.001,
+      "unit": "A"
+    },
+    {
+      "name": "Channel 2 Power",
+      "address": 5,
+      "address_hex": "0x0005",
+      "register_type": "input_register",
+      "function_code": 4,
+      "access": "read",
+      "data_type": "uint16",
+      "scale": 0.01,
+      "unit": "W"
+    },
+    {
+      "name": "Channel 3 Voltage",
+      "address": 6,
+      "address_hex": "0x0006",
+      "register_type": "input_register",
+      "function_code": 4,
+      "access": "read",
+      "data_type": "uint16",
+      "scale": 0.001,
+      "unit": "V"
+    },
+    {
+      "name": "Channel 3 Current",
+      "address": 7,
+      "address_hex": "0x0007",
+      "register_type": "input_register",
+      "function_code": 4,
+      "access": "read",
+      "data_type": "int16",
+      "scale": 0.001,
+      "unit": "A"
+    },
+    {
+      "name": "Channel 3 Power",
+      "address": 8,
+      "address_hex": "0x0008",
+      "register_type": "input_register",
+      "function_code": 4,
+      "access": "read",
+      "data_type": "uint16",
+      "scale": 0.01,
+      "unit": "W"
+    },
+    {
+      "name": "Channel 4 Voltage",
+      "address": 9,
+      "address_hex": "0x0009",
+      "register_type": "input_register",
+      "function_code": 4,
+      "access": "read",
+      "data_type": "uint16",
+      "scale": 0.001,
+      "unit": "V"
+    },
+    {
+      "name": "Channel 4 Current",
+      "address": 10,
+      "address_hex": "0x000A",
+      "register_type": "input_register",
+      "function_code": 4,
+      "access": "read",
+      "data_type": "int16",
+      "scale": 0.001,
+      "unit": "A"
+    },
+    {
+      "name": "Channel 4 Power",
+      "address": 11,
+      "address_hex": "0x000B",
+      "register_type": "input_register",
+      "function_code": 4,
+      "access": "read",
+      "data_type": "uint16",
+      "scale": 0.01,
+      "unit": "W"
+    },
+    {
+      "name": "Serial parameters",
+      "address": 8192,
+      "address_hex": "0x2000",
+      "register_type": "holding_register",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_requires_confirmation": true,
+      "write_function_code": 6
+    },
+    {
+      "name": "Device address",
+      "address": 16384,
+      "address_hex": "0x4000",
+      "register_type": "holding_register",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_requires_confirmation": true,
+      "write_function_code": 6
+    },
+    {
+      "name": "Software version",
+      "address": 32768,
+      "address_hex": "0x8000",
+      "register_type": "holding_register",
+      "function_code": 3,
+      "access": "read",
+      "data_type": "uint16",
+      "write_function_code": null
+    }
+  ],
+  "notes": [
+    "Official development protocol register table mapped.",
+    "Not hardware tested; confirm firmware revision before writing.",
+    "Writes disabled by default.",
+    "Signed current, 1 mA raw unit; voltage raw millivolts; power raw 10 mW."
+  ],
+  "wiki_source_type": "official_manufacturer_wiki",
+  "hardware_tested": false,
+  "import_enabled": true,
+  "writes_enabled_by_default": false,
+  "verified_complete_protocol": false
+}

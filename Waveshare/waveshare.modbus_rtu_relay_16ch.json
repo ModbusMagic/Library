@@ -1,0 +1,904 @@
+{
+  "schema": "modbus-magic.device-template.v1",
+  "manufacturer": "Waveshare",
+  "model": "Modbus RTU Relay 16CH",
+  "id": "waveshare.modbus_rtu_relay_16ch",
+  "category": "relay",
+  "interface": "RS485",
+  "protocol": "Modbus RTU",
+  "addressing": "zero_based_protocol_offset",
+  "status": "documentation_mapped_not_hardware_tested",
+  "source_url": "https://www.waveshare.com/wiki/Modbus_RTU_Relay_16CH",
+  "registers": [
+    {
+      "name": "Relay 1",
+      "address": 0,
+      "address_hex": "0x0000",
+      "register_type": "coil",
+      "function_code": 1,
+      "access": "read_write",
+      "data_type": "bool",
+      "write_function_code": 5,
+      "write_values": {
+        "on": 65280,
+        "off": 0
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Toggle output 1",
+      "address": 256,
+      "address_hex": "0x0100",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "write_values": {
+        "toggle": 65280
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-on delay output 1",
+      "address": 512,
+      "address_hex": "0x0200",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-off delay output 1",
+      "address": 1024,
+      "address_hex": "0x0400",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Relay 2",
+      "address": 1,
+      "address_hex": "0x0001",
+      "register_type": "coil",
+      "function_code": 1,
+      "access": "read_write",
+      "data_type": "bool",
+      "write_function_code": 5,
+      "write_values": {
+        "on": 65280,
+        "off": 0
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Toggle output 2",
+      "address": 257,
+      "address_hex": "0x0101",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "write_values": {
+        "toggle": 65280
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-on delay output 2",
+      "address": 513,
+      "address_hex": "0x0201",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-off delay output 2",
+      "address": 1025,
+      "address_hex": "0x0401",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Relay 3",
+      "address": 2,
+      "address_hex": "0x0002",
+      "register_type": "coil",
+      "function_code": 1,
+      "access": "read_write",
+      "data_type": "bool",
+      "write_function_code": 5,
+      "write_values": {
+        "on": 65280,
+        "off": 0
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Toggle output 3",
+      "address": 258,
+      "address_hex": "0x0102",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "write_values": {
+        "toggle": 65280
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-on delay output 3",
+      "address": 514,
+      "address_hex": "0x0202",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-off delay output 3",
+      "address": 1026,
+      "address_hex": "0x0402",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Relay 4",
+      "address": 3,
+      "address_hex": "0x0003",
+      "register_type": "coil",
+      "function_code": 1,
+      "access": "read_write",
+      "data_type": "bool",
+      "write_function_code": 5,
+      "write_values": {
+        "on": 65280,
+        "off": 0
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Toggle output 4",
+      "address": 259,
+      "address_hex": "0x0103",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "write_values": {
+        "toggle": 65280
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-on delay output 4",
+      "address": 515,
+      "address_hex": "0x0203",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-off delay output 4",
+      "address": 1027,
+      "address_hex": "0x0403",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Relay 5",
+      "address": 4,
+      "address_hex": "0x0004",
+      "register_type": "coil",
+      "function_code": 1,
+      "access": "read_write",
+      "data_type": "bool",
+      "write_function_code": 5,
+      "write_values": {
+        "on": 65280,
+        "off": 0
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Toggle output 5",
+      "address": 260,
+      "address_hex": "0x0104",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "write_values": {
+        "toggle": 65280
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-on delay output 5",
+      "address": 516,
+      "address_hex": "0x0204",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-off delay output 5",
+      "address": 1028,
+      "address_hex": "0x0404",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Relay 6",
+      "address": 5,
+      "address_hex": "0x0005",
+      "register_type": "coil",
+      "function_code": 1,
+      "access": "read_write",
+      "data_type": "bool",
+      "write_function_code": 5,
+      "write_values": {
+        "on": 65280,
+        "off": 0
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Toggle output 6",
+      "address": 261,
+      "address_hex": "0x0105",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "write_values": {
+        "toggle": 65280
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-on delay output 6",
+      "address": 517,
+      "address_hex": "0x0205",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-off delay output 6",
+      "address": 1029,
+      "address_hex": "0x0405",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Relay 7",
+      "address": 6,
+      "address_hex": "0x0006",
+      "register_type": "coil",
+      "function_code": 1,
+      "access": "read_write",
+      "data_type": "bool",
+      "write_function_code": 5,
+      "write_values": {
+        "on": 65280,
+        "off": 0
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Toggle output 7",
+      "address": 262,
+      "address_hex": "0x0106",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "write_values": {
+        "toggle": 65280
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-on delay output 7",
+      "address": 518,
+      "address_hex": "0x0206",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-off delay output 7",
+      "address": 1030,
+      "address_hex": "0x0406",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Relay 8",
+      "address": 7,
+      "address_hex": "0x0007",
+      "register_type": "coil",
+      "function_code": 1,
+      "access": "read_write",
+      "data_type": "bool",
+      "write_function_code": 5,
+      "write_values": {
+        "on": 65280,
+        "off": 0
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Toggle output 8",
+      "address": 263,
+      "address_hex": "0x0107",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "write_values": {
+        "toggle": 65280
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-on delay output 8",
+      "address": 519,
+      "address_hex": "0x0207",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-off delay output 8",
+      "address": 1031,
+      "address_hex": "0x0407",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Relay 9",
+      "address": 8,
+      "address_hex": "0x0008",
+      "register_type": "coil",
+      "function_code": 1,
+      "access": "read_write",
+      "data_type": "bool",
+      "write_function_code": 5,
+      "write_values": {
+        "on": 65280,
+        "off": 0
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Toggle output 9",
+      "address": 264,
+      "address_hex": "0x0108",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "write_values": {
+        "toggle": 65280
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-on delay output 9",
+      "address": 520,
+      "address_hex": "0x0208",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-off delay output 9",
+      "address": 1032,
+      "address_hex": "0x0408",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Relay 10",
+      "address": 9,
+      "address_hex": "0x0009",
+      "register_type": "coil",
+      "function_code": 1,
+      "access": "read_write",
+      "data_type": "bool",
+      "write_function_code": 5,
+      "write_values": {
+        "on": 65280,
+        "off": 0
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Toggle output 10",
+      "address": 265,
+      "address_hex": "0x0109",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "write_values": {
+        "toggle": 65280
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-on delay output 10",
+      "address": 521,
+      "address_hex": "0x0209",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-off delay output 10",
+      "address": 1033,
+      "address_hex": "0x0409",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Relay 11",
+      "address": 10,
+      "address_hex": "0x000A",
+      "register_type": "coil",
+      "function_code": 1,
+      "access": "read_write",
+      "data_type": "bool",
+      "write_function_code": 5,
+      "write_values": {
+        "on": 65280,
+        "off": 0
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Toggle output 11",
+      "address": 266,
+      "address_hex": "0x010A",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "write_values": {
+        "toggle": 65280
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-on delay output 11",
+      "address": 522,
+      "address_hex": "0x020A",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-off delay output 11",
+      "address": 1034,
+      "address_hex": "0x040A",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Relay 12",
+      "address": 11,
+      "address_hex": "0x000B",
+      "register_type": "coil",
+      "function_code": 1,
+      "access": "read_write",
+      "data_type": "bool",
+      "write_function_code": 5,
+      "write_values": {
+        "on": 65280,
+        "off": 0
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Toggle output 12",
+      "address": 267,
+      "address_hex": "0x010B",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "write_values": {
+        "toggle": 65280
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-on delay output 12",
+      "address": 523,
+      "address_hex": "0x020B",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-off delay output 12",
+      "address": 1035,
+      "address_hex": "0x040B",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Relay 13",
+      "address": 12,
+      "address_hex": "0x000C",
+      "register_type": "coil",
+      "function_code": 1,
+      "access": "read_write",
+      "data_type": "bool",
+      "write_function_code": 5,
+      "write_values": {
+        "on": 65280,
+        "off": 0
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Toggle output 13",
+      "address": 268,
+      "address_hex": "0x010C",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "write_values": {
+        "toggle": 65280
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-on delay output 13",
+      "address": 524,
+      "address_hex": "0x020C",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-off delay output 13",
+      "address": 1036,
+      "address_hex": "0x040C",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Relay 14",
+      "address": 13,
+      "address_hex": "0x000D",
+      "register_type": "coil",
+      "function_code": 1,
+      "access": "read_write",
+      "data_type": "bool",
+      "write_function_code": 5,
+      "write_values": {
+        "on": 65280,
+        "off": 0
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Toggle output 14",
+      "address": 269,
+      "address_hex": "0x010D",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "write_values": {
+        "toggle": 65280
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-on delay output 14",
+      "address": 525,
+      "address_hex": "0x020D",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-off delay output 14",
+      "address": 1037,
+      "address_hex": "0x040D",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Relay 15",
+      "address": 14,
+      "address_hex": "0x000E",
+      "register_type": "coil",
+      "function_code": 1,
+      "access": "read_write",
+      "data_type": "bool",
+      "write_function_code": 5,
+      "write_values": {
+        "on": 65280,
+        "off": 0
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Toggle output 15",
+      "address": 270,
+      "address_hex": "0x010E",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "write_values": {
+        "toggle": 65280
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-on delay output 15",
+      "address": 526,
+      "address_hex": "0x020E",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-off delay output 15",
+      "address": 1038,
+      "address_hex": "0x040E",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Relay 16",
+      "address": 15,
+      "address_hex": "0x000F",
+      "register_type": "coil",
+      "function_code": 1,
+      "access": "read_write",
+      "data_type": "bool",
+      "write_function_code": 5,
+      "write_values": {
+        "on": 65280,
+        "off": 0
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Toggle output 16",
+      "address": 271,
+      "address_hex": "0x010F",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "write_values": {
+        "toggle": 65280
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-on delay output 16",
+      "address": 527,
+      "address_hex": "0x020F",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Flash-off delay output 16",
+      "address": 1039,
+      "address_hex": "0x040F",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "scale": 0.1,
+      "unit": "seconds",
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "All outputs command",
+      "address": 255,
+      "address_hex": "0x00FF",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "write_values": {
+        "on": 65280,
+        "off": 0,
+        "toggle": 21760
+      },
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "UART parameters",
+      "address": 8192,
+      "address_hex": "0x2000",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_function_code": 6,
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Slave address",
+      "address": 16384,
+      "address_hex": "0x4000",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_function_code": 6,
+      "write_requires_confirmation": true,
+      "min": 1,
+      "max": 255
+    },
+    {
+      "name": "Firmware version x100",
+      "address": 32768,
+      "address_hex": "0x8000",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read",
+      "data_type": "uint16",
+      "scale": 0.01
+    }
+  ],
+  "notes": [
+    "No hardware test performed. Verify exact PCB/firmware revision before enabling writes.",
+    "4x/3x prefixes are register classes, not decimal address offsets."
+  ],
+  "wiki_source_type": "official_manufacturer_wiki",
+  "hardware_tested": false,
+  "import_enabled": true,
+  "writes_enabled_by_default": false,
+  "verified_complete_protocol": false
+}

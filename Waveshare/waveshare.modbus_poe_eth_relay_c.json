@@ -1,0 +1,23 @@
+{
+  "schema": "modbus-magic.device-template.v1",
+  "manufacturer": "Waveshare",
+  "model": "Modbus POE ETH Relay (C)",
+  "id": "waveshare.modbus_poe_eth_relay_c",
+  "category": "requires_classification",
+  "interface": "Ethernet / PoE",
+  "protocol": "Modbus TCP/RTU (verify per model)",
+  "addressing": "zero_based_protocol_offset",
+  "status": "catalogue_only_requires_protocol_verification",
+  "source_url": "https://www.waveshare.com/wiki/Modbus_POE_ETH_Relay_%28C%29",
+  "registers": [],
+  "notes": [
+    "No hardware test performed. Verify exact PCB/firmware revision before enabling writes.",
+    "4x/3x prefixes are register classes, not decimal address offsets.",
+    "Do not auto-load writable registers: model-specific protocol not established in this release."
+  ],
+  "wiki_source_type": "official_manufacturer_wiki",
+  "hardware_tested": false,
+  "import_enabled": false,
+  "writes_enabled_by_default": false,
+  "verified_complete_protocol": false
+}

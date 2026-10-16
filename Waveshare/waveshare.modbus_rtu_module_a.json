@@ -1,0 +1,280 @@
+{
+  "schema": "modbus-magic.device-template.v1",
+  "manufacturer": "Waveshare",
+  "model": "Modbus RTU Module (A)",
+  "id": "waveshare.modbus_rtu_module_a",
+  "category": "mixed_io",
+  "interface": "RS485",
+  "protocol": "Modbus RTU",
+  "addressing": "zero_based_protocol_offset",
+  "status": "documentation_mapped_not_hardware_tested",
+  "source_url": "https://docs.waveshare.com/Modbus_RTU_Module_A/Development-Protocol",
+  "registers": [
+    {
+      "name": "Digital output 1",
+      "address": 0,
+      "address_hex": "0x0000",
+      "register_type": "coil",
+      "function_code": 1,
+      "access": "read_write",
+      "data_type": "bool",
+      "write_requires_confirmation": true,
+      "write_function_code": 5,
+      "write_values": {
+        "on": 65280,
+        "off": 0
+      }
+    },
+    {
+      "name": "Digital input 1",
+      "address": 0,
+      "address_hex": "0x0000",
+      "register_type": "discrete_input",
+      "function_code": 2,
+      "access": "read",
+      "data_type": "bool"
+    },
+    {
+      "name": "Analog input 1",
+      "address": 0,
+      "address_hex": "0x0000",
+      "register_type": "input_register",
+      "function_code": 4,
+      "access": "read",
+      "data_type": "uint16"
+    },
+    {
+      "name": "Analog output 1",
+      "address": 0,
+      "address_hex": "0x0000",
+      "register_type": "holding_register",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_requires_confirmation": true,
+      "write_function_code": 6,
+      "raw_unit": "microampere"
+    },
+    {
+      "name": "Output control mode 1",
+      "address": 4096,
+      "address_hex": "0x1000",
+      "register_type": "holding_register",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_requires_confirmation": true,
+      "write_function_code": 6
+    },
+    {
+      "name": "Analog input type 1",
+      "address": 12288,
+      "address_hex": "0x3000",
+      "register_type": "holding_register",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_requires_confirmation": true,
+      "write_function_code": 6
+    },
+    {
+      "name": "Toggle output 1",
+      "address": 256,
+      "address_hex": "0x0100",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "write_requires_confirmation": true,
+      "write_values": {
+        "toggle": 65280
+      }
+    },
+    {
+      "name": "Flash-on output 1",
+      "address": 512,
+      "address_hex": "0x0200",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "write_requires_confirmation": true,
+      "scale": 0.1,
+      "unit": "seconds"
+    },
+    {
+      "name": "Flash-off output 1",
+      "address": 1024,
+      "address_hex": "0x0400",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "write_requires_confirmation": true,
+      "scale": 0.1,
+      "unit": "seconds"
+    },
+    {
+      "name": "Digital output 2",
+      "address": 1,
+      "address_hex": "0x0001",
+      "register_type": "coil",
+      "function_code": 1,
+      "access": "read_write",
+      "data_type": "bool",
+      "write_requires_confirmation": true,
+      "write_function_code": 5,
+      "write_values": {
+        "on": 65280,
+        "off": 0
+      }
+    },
+    {
+      "name": "Digital input 2",
+      "address": 1,
+      "address_hex": "0x0001",
+      "register_type": "discrete_input",
+      "function_code": 2,
+      "access": "read",
+      "data_type": "bool"
+    },
+    {
+      "name": "Analog input 2",
+      "address": 1,
+      "address_hex": "0x0001",
+      "register_type": "input_register",
+      "function_code": 4,
+      "access": "read",
+      "data_type": "uint16"
+    },
+    {
+      "name": "Analog output 2",
+      "address": 1,
+      "address_hex": "0x0001",
+      "register_type": "holding_register",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_requires_confirmation": true,
+      "write_function_code": 6,
+      "raw_unit": "microampere"
+    },
+    {
+      "name": "Output control mode 2",
+      "address": 4097,
+      "address_hex": "0x1001",
+      "register_type": "holding_register",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_requires_confirmation": true,
+      "write_function_code": 6
+    },
+    {
+      "name": "Analog input type 2",
+      "address": 12289,
+      "address_hex": "0x3001",
+      "register_type": "holding_register",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_requires_confirmation": true,
+      "write_function_code": 6
+    },
+    {
+      "name": "Toggle output 2",
+      "address": 257,
+      "address_hex": "0x0101",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "write_requires_confirmation": true,
+      "write_values": {
+        "toggle": 65280
+      }
+    },
+    {
+      "name": "Flash-on output 2",
+      "address": 513,
+      "address_hex": "0x0201",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "write_requires_confirmation": true,
+      "scale": 0.1,
+      "unit": "seconds"
+    },
+    {
+      "name": "Flash-off output 2",
+      "address": 1025,
+      "address_hex": "0x0401",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "write_requires_confirmation": true,
+      "scale": 0.1,
+      "unit": "seconds"
+    },
+    {
+      "name": "All outputs command",
+      "address": 255,
+      "address_hex": "0x00FF",
+      "register_type": "coil_command",
+      "function_code": 5,
+      "access": "write",
+      "data_type": "uint16",
+      "write_requires_confirmation": true,
+      "write_values": {
+        "on": 65280,
+        "off": 0,
+        "toggle": 21760
+      }
+    },
+    {
+      "name": "Serial parameters",
+      "address": 8192,
+      "address_hex": "0x2000",
+      "register_type": "holding_register",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_requires_confirmation": true,
+      "write_function_code": 6
+    },
+    {
+      "name": "Device address",
+      "address": 16384,
+      "address_hex": "0x4000",
+      "register_type": "holding_register",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_requires_confirmation": true,
+      "write_function_code": 6
+    },
+    {
+      "name": "Software version",
+      "address": 32768,
+      "address_hex": "0x8000",
+      "register_type": "holding_register",
+      "function_code": 3,
+      "access": "read",
+      "data_type": "uint16",
+      "write_function_code": null
+    }
+  ],
+  "notes": [
+    "Official development protocol register table mapped.",
+    "Not hardware tested; confirm firmware revision before writing.",
+    "Writes disabled by default.",
+    "Analog-input interpretation depends on configurable range; no fixed scale assigned."
+  ],
+  "wiki_source_type": "official_manufacturer_wiki",
+  "hardware_tested": false,
+  "import_enabled": true,
+  "writes_enabled_by_default": false,
+  "verified_complete_protocol": false
+}

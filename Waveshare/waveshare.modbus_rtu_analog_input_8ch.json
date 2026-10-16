@@ -1,0 +1,290 @@
+{
+  "schema": "modbus-magic.device-template.v1",
+  "manufacturer": "Waveshare",
+  "model": "Modbus RTU Analog Input 8CH",
+  "id": "waveshare.modbus_rtu_analog_input_8ch",
+  "category": "analog_input",
+  "interface": "RS485",
+  "protocol": "Modbus RTU",
+  "addressing": "zero_based_protocol_offset",
+  "status": "documentation_mapped_not_hardware_tested",
+  "source_url": "https://www.waveshare.com/wiki/Modbus_RTU_Analog_Input_8CH",
+  "registers": [
+    {
+      "name": "Analog input 1 raw",
+      "address": 0,
+      "address_hex": "0x0000",
+      "register_type": "input",
+      "function_code": 4,
+      "access": "read",
+      "data_type": "uint16",
+      "unit": "range_dependent",
+      "scale": 1
+    },
+    {
+      "name": "Input range 1",
+      "address": 4096,
+      "address_hex": "0x1000",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_function_code": 6,
+      "write_requires_confirmation": true,
+      "enum": {
+        "0": "0-5V",
+        "1": "1-5V / 2-10V",
+        "2": "0-20mA",
+        "3": "4-20mA",
+        "4": "raw ADC"
+      }
+    },
+    {
+      "name": "Analog input 2 raw",
+      "address": 1,
+      "address_hex": "0x0001",
+      "register_type": "input",
+      "function_code": 4,
+      "access": "read",
+      "data_type": "uint16",
+      "unit": "range_dependent",
+      "scale": 1
+    },
+    {
+      "name": "Input range 2",
+      "address": 4097,
+      "address_hex": "0x1001",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_function_code": 6,
+      "write_requires_confirmation": true,
+      "enum": {
+        "0": "0-5V",
+        "1": "1-5V / 2-10V",
+        "2": "0-20mA",
+        "3": "4-20mA",
+        "4": "raw ADC"
+      }
+    },
+    {
+      "name": "Analog input 3 raw",
+      "address": 2,
+      "address_hex": "0x0002",
+      "register_type": "input",
+      "function_code": 4,
+      "access": "read",
+      "data_type": "uint16",
+      "unit": "range_dependent",
+      "scale": 1
+    },
+    {
+      "name": "Input range 3",
+      "address": 4098,
+      "address_hex": "0x1002",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_function_code": 6,
+      "write_requires_confirmation": true,
+      "enum": {
+        "0": "0-5V",
+        "1": "1-5V / 2-10V",
+        "2": "0-20mA",
+        "3": "4-20mA",
+        "4": "raw ADC"
+      }
+    },
+    {
+      "name": "Analog input 4 raw",
+      "address": 3,
+      "address_hex": "0x0003",
+      "register_type": "input",
+      "function_code": 4,
+      "access": "read",
+      "data_type": "uint16",
+      "unit": "range_dependent",
+      "scale": 1
+    },
+    {
+      "name": "Input range 4",
+      "address": 4099,
+      "address_hex": "0x1003",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_function_code": 6,
+      "write_requires_confirmation": true,
+      "enum": {
+        "0": "0-5V",
+        "1": "1-5V / 2-10V",
+        "2": "0-20mA",
+        "3": "4-20mA",
+        "4": "raw ADC"
+      }
+    },
+    {
+      "name": "Analog input 5 raw",
+      "address": 4,
+      "address_hex": "0x0004",
+      "register_type": "input",
+      "function_code": 4,
+      "access": "read",
+      "data_type": "uint16",
+      "unit": "range_dependent",
+      "scale": 1
+    },
+    {
+      "name": "Input range 5",
+      "address": 4100,
+      "address_hex": "0x1004",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_function_code": 6,
+      "write_requires_confirmation": true,
+      "enum": {
+        "0": "0-5V",
+        "1": "1-5V / 2-10V",
+        "2": "0-20mA",
+        "3": "4-20mA",
+        "4": "raw ADC"
+      }
+    },
+    {
+      "name": "Analog input 6 raw",
+      "address": 5,
+      "address_hex": "0x0005",
+      "register_type": "input",
+      "function_code": 4,
+      "access": "read",
+      "data_type": "uint16",
+      "unit": "range_dependent",
+      "scale": 1
+    },
+    {
+      "name": "Input range 6",
+      "address": 4101,
+      "address_hex": "0x1005",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_function_code": 6,
+      "write_requires_confirmation": true,
+      "enum": {
+        "0": "0-5V",
+        "1": "1-5V / 2-10V",
+        "2": "0-20mA",
+        "3": "4-20mA",
+        "4": "raw ADC"
+      }
+    },
+    {
+      "name": "Analog input 7 raw",
+      "address": 6,
+      "address_hex": "0x0006",
+      "register_type": "input",
+      "function_code": 4,
+      "access": "read",
+      "data_type": "uint16",
+      "unit": "range_dependent",
+      "scale": 1
+    },
+    {
+      "name": "Input range 7",
+      "address": 4102,
+      "address_hex": "0x1006",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_function_code": 6,
+      "write_requires_confirmation": true,
+      "enum": {
+        "0": "0-5V",
+        "1": "1-5V / 2-10V",
+        "2": "0-20mA",
+        "3": "4-20mA",
+        "4": "raw ADC"
+      }
+    },
+    {
+      "name": "Analog input 8 raw",
+      "address": 7,
+      "address_hex": "0x0007",
+      "register_type": "input",
+      "function_code": 4,
+      "access": "read",
+      "data_type": "uint16",
+      "unit": "range_dependent",
+      "scale": 1
+    },
+    {
+      "name": "Input range 8",
+      "address": 4103,
+      "address_hex": "0x1007",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_function_code": 6,
+      "write_requires_confirmation": true,
+      "enum": {
+        "0": "0-5V",
+        "1": "1-5V / 2-10V",
+        "2": "0-20mA",
+        "3": "4-20mA",
+        "4": "raw ADC"
+      }
+    },
+    {
+      "name": "UART parameters",
+      "address": 8192,
+      "address_hex": "0x2000",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_function_code": 6,
+      "write_requires_confirmation": true
+    },
+    {
+      "name": "Slave address",
+      "address": 16384,
+      "address_hex": "0x4000",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read_write",
+      "data_type": "uint16",
+      "write_function_code": 6,
+      "write_requires_confirmation": true,
+      "min": 1,
+      "max": 255
+    },
+    {
+      "name": "Firmware version x100",
+      "address": 32768,
+      "address_hex": "0x8000",
+      "register_type": "holding",
+      "function_code": 3,
+      "access": "read",
+      "data_type": "uint16",
+      "scale": 0.01
+    }
+  ],
+  "notes": [
+    "No hardware test performed. Verify exact PCB/firmware revision before enabling writes.",
+    "4x/3x prefixes are register classes, not decimal address offsets.",
+    "Raw value engineering units depend on per-channel configured range. Do not apply a universal scaling factor."
+  ],
+  "wiki_source_type": "official_manufacturer_wiki",
+  "hardware_tested": false,
+  "import_enabled": true,
+  "writes_enabled_by_default": false,
+  "verified_complete_protocol": false
+}
